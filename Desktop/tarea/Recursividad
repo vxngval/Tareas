@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class potencialRecursivo {
+
+    public static void main(String[] args) {
+        int base, exp;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("\tPrograma que calcula la potencia de un numero");
+
+        System.out.print("Introduzca la base: ");
+        base = sc.nextInt();
+        System.out.print("Introduzca el exponente: ");
+        exp = sc.nextInt();
+
+        System.out.println("La potencia de " + base + " elevado a " + exp + " es: " + potencia(base, exp));
+    }
+
+    public static int potencia(int base, int exp) {
+        if (exp == 0) {
+            return 1; 
+        } else {
+            return base * potencia(base, exp - 1); 
+        }
+    }
+}
